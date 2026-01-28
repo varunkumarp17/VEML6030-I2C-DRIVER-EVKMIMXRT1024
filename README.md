@@ -9,9 +9,12 @@ and separation of driver and application logic.
 ---
 
 ## Hardware
-- Board: EVKMIMXRT1024
+- Board: EVKMIMXRT1024 - NXP SEMICONDUCTORS
 - Sensor: VEML6030
 - Interface: I2C
+
+## Software
+- MCU Xpresso Ide
 
 ---
 
@@ -21,13 +24,22 @@ and separation of driver and application logic.
 
 ---
 
-## Features
+## Driver Features
 - Sensor initialization
-- Raw ALS data reading
-- Lux conversion
-- Reusable driver API
+- Ambient light (ALS) data reading
+- Lux value calculation
+- Reusable and modular driver design
 
 ---
 
-## Status
-Driver implemented and tested.
+## Hardware Connections
+
+### I2C Connections
+| EVKMIMXRT1024 Pin | Function | VEML6030 Pin |
+|------------------|----------|--------------|
+| I2C SCL          | Clock    | SCL          |
+| I2C SDA          | Data     | SDA          |
+| 3.3V             | Power    | VCC          |
+| GND              | Ground   | GND          |
+
+> I2C pull-up resistors are provided on the sensor module or development board.
